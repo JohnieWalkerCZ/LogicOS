@@ -1,0 +1,32 @@
+Jelikož jsem omezen pixely tak tu dělám stručný návod:
+
+------------------------------------------------------
+                 výběr obtížnosti
+------------------------------------------------------
+Jakmile se zavolá MS, tak vyskočí obrazovka se žlutou barvou
+Teď lze nastavit obtížnost hry:
+Left:   Lehká   Zelená  10 min
+Enter:  Střední Žlutá   15 min
+Right:  Těžká   Červená 20 min
+
+Výběr se potvrdí zmáčknutím tlačítka Rightdown (kam ukazuje šipka)
+
+------------------------------------------------------
+                 Hra
+------------------------------------------------------
+Na obrazovce právě bliká světle modře kurzor.
+Ten se dá ovládat tlačítky Left,Right,Down,Up.
+Po zmáčknutí tlačítka Enter se vykope pixel, na kterém je kurzor.
+Jedná-li se o minu, hráč prohrává a přehraje se animace.
+Jinak se ukáže políčko, které v daném pixelu je.
+Políčka říkají kolik min je na sousedních polích, včetně diagonál.
+Bílá    0
+Modrá   1
+Zelená  2
+Červená 3
+Fialová 4
+Žlutá   5
+Hráč vyhrává tehdy, když vykope veškerá políčka, která neobsahují minu.
+Poté se přehraje animace a hráč má možnost se podívat na hrací plochu.
+
+Hra v této fázi jde kdykoli vypnout pomocí tlačítka LeftDown.
