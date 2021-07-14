@@ -1,5 +1,5 @@
 # LogicOS
-Perfektní řešení pro váš Logic!
+Perfektní řešení pro váš Logic!                                
 -Open source                 
 -Optimized         
 -"Free"                     
