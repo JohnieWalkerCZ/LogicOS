@@ -1,10 +1,6 @@
 # LogicOS
-Perfektní řešení pro váš Logic!                                
+Perfect solution for your Logic                                
 -Open source                 
 -Optimized         
 -"Free"                     
--100% child labour  
-- |   ||
-- ||  |_                    
-
-
+-100% child labour                    
