@@ -3,6 +3,8 @@ Perfektní řešení pro váš Logic!
 -Open source                 
 -Optimized         
 -"Free"                     
--100% child labour                            
+-100% child labour  
+- |   ||
+- ||  |_                    
 
 
