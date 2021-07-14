@@ -4,7 +4,7 @@ Perfektní řešení pro váš Logic!
 -Optimized         
 -"Free"                     
 -100% child labour  
--|   ||
--||  |_                    
+- |   ||
+- ||  |_                    
 
 
