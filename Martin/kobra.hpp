@@ -38,4 +38,4 @@ struct kobra_out {
 };
 
 void basic_kobra();
-void setable_kobra(int default_slowness, int timeStep_acceleration, int score_acceleration, bool allowed_keys[8] /* 0 Up | 1 LeftUp | 2 Left | ... | 7 RightUp */, int maxScore, bool score_counter_on, position borders[100]);
+void setable_kobra(singleKobra_in data);
