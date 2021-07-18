@@ -29,7 +29,7 @@ void delparticle(int num){
    }
 }
 
-void fire (){
+void fireA (){
 
    display.clear();
 
@@ -69,5 +69,15 @@ void fire (){
    display.setColor(0,0,Rgb(0,0,0));
    display.show();
    delay(100);
+
+}
+
+void fire(){
+   for(int i = 0;i<1000;i++){
+      particly[i][2] = -1;
+   }
+   while(true){
+      fireA();
+   }
 
 }
