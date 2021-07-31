@@ -1,10 +1,35 @@
 #include "Logic.hpp"
+#include "Other.hpp"
+#include "MSplugin.hpp"
 #include "Games.hpp"
 #include "snake.hpp"
 #include "esp_spiffs.h"
 #include <iostream>
 #include <vector>
 #include <cstdio>
+
+void playChosenGame(int & brightness, int & onScreen, int snakeSpeed)
+{
+    clearButtonsCallbacks();
+
+    switch (onScreen)
+    {
+    case -1:
+        minesweeper(brightness);
+        break;
+    case 0:
+        flappyBird(brightness);
+        break;
+    case 1:
+        snakeMain(snakeSpeed, brightness);
+        break;
+    default:
+        break;
+    }
+
+    clearButtonsCallbacks();
+    loadOSCallbacks(brightness, onScreen, snakeSpeed);
+}
 
 //Snake
 
@@ -75,15 +100,15 @@ void pipes(int brightness)
         {
             destroyBird();
             birdY++;
-            if (buttons.read(Enter))
-            {
-                // std::cout << "Enter was pressed" << std::endl;
-                display.at(1, birdY) = Rgb(0, 0, 0);
-                display.at(2, birdY) = Rgb(0, 0, 0);
-                birdY -= 3;
-                display.at(1, birdY) = Rgb(255, 255, 0);
-                display.at(2, birdY) = Rgb(255, 255, 0);
-            }
+            // if (buttons.read(Enter))
+            // {
+            //     // std::cout << "Enter was pressed" << std::endl;
+            //     display.at(1, birdY) = Rgb(0, 0, 0);
+            //     display.at(2, birdY) = Rgb(0, 0, 0);
+            //     birdY -= 3;
+            //     display.at(1, birdY) = Rgb(255, 255, 0);
+            //     display.at(2, birdY) = Rgb(255, 255, 0);
+            // }
             if (birdY <= 0)
             {
                 birdY = 0;
@@ -117,19 +142,19 @@ void pipes(int brightness)
 
 void flappyBird(int brightness)
 {
-//     buttons.onPress([]()
-//                     {
-//                         // std::cout << "Enter was pressed" << std::endl;
-//                         display.at(1, birdY) = Rgb(0, 0, 0);
-//                         //Toto NIKDY nepridavat do kodu.
-// //---------------------------------------------------------------------
-//                         // birdY -= 3;
-// //---------------------------------------------------------------------
-//                         display.at(2, birdY) = Rgb(0, 0, 0);
-//                         display.at(1, birdY) = Rgb(255, 255, 0);
-//                         display.at(2, birdY) = Rgb(255, 255, 0);
-//                     },
-//                     Enter);
+    buttons.onPress([]()
+                    {
+                        // std::cout << "Enter was pressed" << std::endl;
+                        display.at(1, birdY) = Rgb(0, 0, 0);
+                        //Toto NIKDY nepridavat do kodu.
+//---------------------------------------------------------------------
+                        birdY -= 3;
+//---------------------------------------------------------------------
+                        display.at(2, birdY) = Rgb(0, 0, 0);
+                        display.at(1, birdY) = Rgb(255, 255, 0);
+                        display.at(2, birdY) = Rgb(255, 255, 0);
+                    },
+                    Enter);
     bird();
     pipes(brightness);
 }
